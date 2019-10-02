@@ -23,9 +23,9 @@ static PyMethodDef myMethods[] = {
 };
 
 // Our Module Definition struct
-static struct PyModuleDef myModule = {
+static struct PyModuleDef dbsonModule = {
     PyModuleDef_HEAD_INIT,
-    "DemoPackage",
+    "dbson",
     "A demo module for python c extensions",
     -1,
     myMethods
@@ -34,5 +34,5 @@ static struct PyModuleDef myModule = {
 // Initializes our module using our above struct
 PyMODINIT_FUNC PyInit_DemoPackage(void)
 {
-    return PyModule_Create(&myModule);
+    return PyModule_Create(&dbsonModule);
 }
